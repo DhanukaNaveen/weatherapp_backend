@@ -3,16 +3,16 @@ import dotenv from "dotenv";
 import cors from "cors";
 import weatherRouter from "./routers/weatherRouter.js";
 
-dotenv.config();  // Load environment variables from .env file
+dotenv.config();  
 
 const app = express();
 
 // Middleware
-app.use(express.json());  // Built-in Express method to parse JSON bodies
-app.use(cors());  // Enable CORS for cross-origin requests
+app.use(express.json());  
+app.use(cors());  
 
 // Routes
-app.use("/api/weather", weatherRouter);  // All weather-related routes are prefixed with /api/weather
+app.use("/api/weather", weatherRouter);  
 
 // Start server
 app.listen(5000, () => {
