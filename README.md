@@ -31,9 +31,18 @@ Before you begin, ensure you have the following installed and set up:
 Create a `.env` file in the **backend** directory with the following variables:
 
 ```
-OPENWEATHERMAP_API_KEY=your_openweathermap_api_key  
+API_KEY=your_openweathermap_api_key  
 AUTH0_DOMAIN=your_auth0_domain  
-AUTH0_CLIENT_ID=your_auth0_client_id
+API_IDENTIFIER=Must match the audience configured in Auth0 for your API
+
+```
+Create a `.env` file in the **frontend** directory with the following variables:
+
+```
+VITE_AUTH0_DOMAIN=your_auth0_domain  
+VITE_AUTH0_CLIENT_ID=client ID from Auth0
+VITE_BACKEND_URL=Local backend server URL
+
 ```
 
 ## 🚀 Getting Started
@@ -95,5 +104,3 @@ The frontend application will now be running at http://localhost:5173.
 - **Authentication**: Auth0 (with MFA)
 - **Weather API**: OpenWeatherMap
 - **Caching**: NodeCache
-
-
