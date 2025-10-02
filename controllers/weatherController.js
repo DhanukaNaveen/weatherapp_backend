@@ -9,8 +9,8 @@ import NodeCache from 'node-cache';
 dotenv.config();  
 
 
-const __filename = fileURLToPath(import.meta.url);  // Get the full file path of the current file
-const __dirname = dirname(__filename);  // Get the directory path of the current file
+const __filename = fileURLToPath(import.meta.url);  
+const __dirname = dirname(__filename);  
 
 
 const weatherCache = new NodeCache({ stdTTL: 300, checkperiod: 320 });  
